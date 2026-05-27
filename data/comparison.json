@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Stripe vs Adyen for FinTech Startups: Payment Processor Comparison",
+    "description": "Structured comparison of Stripe and Adyen for fintech startups and scale-ups, covering developer experience, global coverage, pricing, and enterprise readiness.",
+    "version": "1.0.0",
+    "updated": "2026-05-26",
+    "source": "https://swifttechco.com/comparisons/stripe-vs-adyen-fintech-startups"
+  },
+  "platforms": {
+    "stripe": {
+      "name": "Stripe",
+      "vendor": "Stripe Inc.",
+      "founded": 2010,
+      "valuation_billion": 65,
+      "countries_supported": 46,
+      "currencies_supported": 135,
+      "website": "https://stripe.com",
+      "pricing_model": "Pay-as-you-go; 2.9% + $0.30 per successful card transaction (US)"
+    },
+    "adyen": {
+      "name": "Adyen",
+      "vendor": "Adyen N.V.",
+      "founded": 2006,
+      "listed": "Euronext Amsterdam (ADYEN)",
+      "countries_supported": 40,
+      "currencies_supported": 187,
+      "website": "https://www.adyen.com",
+      "pricing_model": "Interchange++ with Adyen processing fee; minimum monthly volume requirements"
+    }
+  },
+  "dimensions": [
+    {
+      "name": "Developer experience",
+      "stripe": { "rating": 5, "notes": "Best-in-class docs; interactive API explorer; SDKs for 12+ languages; Stripe CLI; test mode" },
+      "adyen":  { "rating": 3, "notes": "Good docs for enterprise; steeper learning curve; less intuitive for first-time integrators" }
+    },
+    {
+      "name": "Time to first transaction",
+      "stripe": { "rating": 5, "notes": "Live in minutes; no approval required; instant test mode; hosted checkout available" },
+      "adyen":  { "rating": 2, "notes": "Merchant application, KYC review, account approval required; days to weeks before going live" }
+    },
+    {
+      "name": "Global coverage",
+      "stripe": { "rating": 4, "notes": "46 countries for merchant signup; 135 currencies; strong in North America and Europe" },
+      "adyen":  { "rating": 5, "notes": "Broader currency support (187); stronger in APAC and LATAM; local acquiring in more markets" }
+    },
+    {
+      "name": "Local payment methods",
+      "stripe": { "rating": 4, "notes": "SEPA, iDEAL, Sofort, BECS, BACS, Alipay, WeChat Pay, Klarna, Afterpay and more" },
+      "adyen":  { "rating": 5, "notes": "200+ local payment methods; strongest local acquiring network; Pix, GoPay, MBWay, etc." }
+    },
+    {
+      "name": "Pricing (low volume, under $50k/mo)",
+      "stripe": { "rating": 4, "notes": "Transparent flat rate; no minimums; 2.9% + $0.30; easy to predict for startups" },
+      "adyen":  { "rating": 2, "notes": "Interchange++ not competitive at low volume; processing minimums discourage small merchants" }
+    },
+    {
+      "name": "Pricing (high volume, $500k+/mo)",
+      "stripe": { "rating": 3, "notes": "Custom pricing available but starts higher than interchange++; negotiate for volume" },
+      "adyen":  { "rating": 5, "notes": "Interchange++ pricing significantly cheaper at scale; no markup stacking; direct scheme fees" }
+    },
+    {
+      "name": "Fraud prevention",
+      "stripe": { "rating": 5, "notes": "Stripe Radar (ML-based); rules engine; 3D Secure 2; Stripe Chargeback Protection" },
+      "adyen":  { "rating": 5, "notes": "RevenueProtect (ML-based); 3DS2; Risk rules; comparable to Stripe Radar" }
+    },
+    {
+      "name": "Subscription and billing",
+      "stripe": { "rating": 5, "notes": "Stripe Billing: trials, metered billing, invoice, customer portal, proration; best-in-class" },
+      "adyen":  { "rating": 3, "notes": "Recurring payments via tokenized cards; less turnkey than Stripe Billing; more DIY" }
+    },
+    {
+      "name": "Embedded finance / platform payments",
+      "stripe": { "rating": 5, "notes": "Stripe Connect: multi-party payouts, custom onboarding, platform fees, separate KYC per sub-merchant" },
+      "adyen":  { "rating": 4, "notes": "Adyen for Platforms: split payments, sub-merchant onboarding; mature but more enterprise-focused" }
+    },
+    {
+      "name": "Reporting and reconciliation",
+      "stripe": { "rating": 4, "notes": "Stripe Sigma (SQL on your data), Dashboard reports, webhooks; good for most needs" },
+      "adyen":  { "rating": 5, "notes": "DataConnect; granular settlement reports; finance-team-grade reconciliation; preferred by CFOs" }
+    },
+    {
+      "name": "POS and in-person payments",
+      "stripe": { "rating": 4, "notes": "Stripe Terminal; Stripe Reader S700; SDK for iOS/Android; unified online + in-person dashboard" },
+      "adyen":  { "rating": 5, "notes": "Adyen Terminal API; largest enterprise POS deployments (McDonald's, H&M); unified commerce" }
+    },
+    {
+      "name": "Compliance and banking license",
+      "stripe": { "rating": 4, "notes": "PCI DSS Level 1; SOC 2; licensed payment institution in multiple jurisdictions" },
+      "adyen":  { "rating": 5, "notes": "European banking license (DNB); acquiring bank in multiple regions; higher trust for regulated use cases" }
+    }
+  ],
+  "use_case_recommendations": [
+    {
+      "use_case": "Fintech startup (seed to Series A)",
+      "recommendation": "stripe",
+      "reason": "No volume minimums, fastest time to live, best developer experience, all-in-one billing and connect"
+    },
+    {
+      "use_case": "SaaS platform billing (subscriptions, metered usage)",
+      "recommendation": "stripe",
+      "reason": "Stripe Billing is the most complete subscription management solution available"
+    },
+    {
+      "use_case": "Marketplace or platform with sub-merchant payouts",
+      "recommendation": "stripe",
+      "reason": "Stripe Connect handles KYC, payouts, and fee splits with minimal custom code"
+    },
+    {
+      "use_case": "Enterprise retailer with global physical stores",
+      "recommendation": "adyen",
+      "reason": "Adyen unified commerce covers POS, online, and mobile under one ledger; deepest enterprise POS network"
+    },
+    {
+      "use_case": "High-volume payments ($1M+/mo GMV)",
+      "recommendation": "adyen",
+      "reason": "Interchange++ pricing at scale beats Stripe flat rate; direct scheme relationship reduces fees"
+    },
+    {
+      "use_case": "APAC or LATAM primary market",
+      "recommendation": "adyen",
+      "reason": "Local acquiring and payment methods in Southeast Asia and Latin America stronger than Stripe"
+    }
+  ],
+  "fee_comparison_example": {
+    "scenario": "$100 US Visa card transaction",
+    "stripe_flat_rate": "$3.20 (2.9% + $0.30)",
+    "adyen_interchange_plus": "$2.10 to $2.50 (interchange ~1.8% + Adyen fee ~0.30%)",
+    "note": "Adyen advantage grows with volume; Stripe advantage is zero setup friction"
+  }
+}
